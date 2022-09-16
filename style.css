@@ -1,0 +1,178 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #222;
+  color: white;
+  font-size: 1.5em;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  width: 900px;
+}
+
+#create-layout h1 {
+  margin-bottom: 4rem;
+}
+
+#install-button {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #00a0d2;
+  color: white;
+  width: 230px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: auto;
+}
+
+.checkboxes {
+  font-size: 2.5rem;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.checkboxes label {
+  padding-left: 45px;
+  text-align: center;
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxes input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxes label:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxes label input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxes label input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxes label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+#layout-created h1 {
+  margin-bottom: 1rem;
+}
+
+.keybind {
+  background-color: white;
+  color: black;
+  padding: 0 5px;
+  border-radius: 6px;
+}
+
+#code-and-copy {
+  width: max-content;
+  margin: auto;
+  user-select: none;
+}
+
+#code-and-copy * {
+  display: inline-block;
+}
+
+#code-and-copy #code {
+  width: 500px;
+  overflow-x: scroll;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  user-select: all;
+}
+
+#code-and-copy #copy-button {
+  background-color: #00a0d2;
+  color: white;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 6px 20px;
+  height: 32px;
+  margin-left: -14px;
+  border-radius: 0 10px 10px 0;
+  vertical-align: top;
+  text-align: center;
+}
+
+#back-button {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #cd1010;
+  color: white;
+  width: 230px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 2rem;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="create-layout">
+    <div class="centered">
+      <h1>Customize your Colemak layout for <a href="https://karabiner-elements.pqrs.org/" target="_blank"
+          rel="noreferrer noopener">Karabiner</a>.</h1>
+      <div class="checkboxes">
+        <label> Curl (DH) Mod
+          <input type="checkbox" id="curl">
+          <span class="checkmark"></span>
+        </label>
+        <label> Angle Mod
+          <input type="checkbox" id="angle">
+          <span class="checkmark"></span>
+        </label>
+        <label> Wide Mod
+          <input type="checkbox" id="wide">
+          <span class="checkmark"></span>
+        </label>
+        <label> Symbol Mod
+          <input type="checkbox" id="symbol">
+          <span class="checkmark"></span>
+        </label>
+        <label> Extend
+          <input type="checkbox" id="extend">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div id="install-button">Install</div>
+    </div>
+  </div>
+
+  <div class="hidden" id="layout-created">
+    <div class="centered">
+      <h1>Your Colemak layout has been created!</h1>
+      <p>You chose: <span id="layout-placeholder"></span></p>
+      <p>To enable/disable your layout, press
+        <span class="keybind">CMD</span> + <span class="keybind">LSHIFT</span> + <span class="keybind">`</span>.
+      </p>
+      <p>If you weren't asked to install your layout, you may need to <a href="https://karabiner-elements.pqrs.org/"
+          target="_blank" rel="noreferrer noopener">install Karabiner-Elements</a>. If you have already installed
+        Karabiner-Elements, paste this into your browser:</p>
+
+      <div id="code-and-copy">
+        <pre id="code"></pre>
+        <div id="copy-button">Copy</div>
+      </div>
+      <div id="back-button">Back</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
