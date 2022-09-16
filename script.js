@@ -6,7 +6,7 @@ document.getElementById("install-button").addEventListener("click", function () 
   const symbol = document.getElementById("symbol").checked ? "1" : "0";
   const extend = document.getElementById("extend").checked ? "1" : "0";
 
-  url = `karabiner://karabiner/assets/complex_modifications/import?url=${curl}${angle}${wide}${symbol}${extend}.json`;
+  url = `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/ProfXwing/karabiner-colemak/master/layouts/${curl}${angle}${wide}${symbol}${extend}.json`;
   window.location.href = url;
 
   let description = "Colemak ";
