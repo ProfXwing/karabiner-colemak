@@ -20,3 +20,6 @@ Congratulations, you are now the proud owner of a Colemak layout.
 # What's this Extend thing?
 For information about the Karabiner implementation, read https://github.com/ProfXwing/extend-karabiner
 For information about Extend in general, read https://dreymar.colemak.org/layers-extend.html
+
+# Little warning
+This script may only work when qwerty is set as the input source. The layout will likely work incorrectly if you use a different layout. Make an issue here if there's any problem with that and I'll come up with a solution for you. It's pretty easy to switch the original layout. It would be slightly difficult to implement every source layout, though.
