@@ -69,14 +69,14 @@ for curl, angle, wide, symbol in product((0, 1), repeat=4):
 
     # Toggle layout on and off
     toggle_layout_on = Manipulator().basic_from('`', ['left_command', 'left_shift']).set_variable_to(
-        'colemak', 1).require_variable('colemak', 0)
+        'qwerty', 1).require_variable('qwerty', 0)
     toggle_layout_off = Manipulator().basic_from('`', ['left_command', 'left_shift']).set_variable_to(
-        'colemak', 0).require_variable('colemak', 1)
+        'qwerty', 0).require_variable('qwerty', 1)
 
     # Turn string layouts into karabiner manipulators
     layout_manipulators = combine_ansi_iso(*layouts)
     for manipulator in layout_manipulators:
-        manipulator.require_variable('colemak', 1)
+        manipulator.require_variable('qwerty', 0)
         manipulator.require_variable('extend', 0)
 
     # Turn manipulators into a rule with the layout description
