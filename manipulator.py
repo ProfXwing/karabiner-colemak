@@ -58,7 +58,7 @@ class Manipulator:
             "keyboard_types": keyboard_types
         })
         return self
-
+        
 
 # So I can convert from string to keycodes
 text_to_keycode = {
@@ -92,3 +92,30 @@ def manipulators_from_keys(qwerty_keys: list[str], layout_keys: list[str], allow
         manipulators.append(Manipulator().basic_from(
             qwerty_key).basic_to(layout_key))
     return manipulators
+
+def create_virtual_modifier(key_code: str, variable_name: str):
+    return {
+        "from": {
+            "key_code": key_code,
+            "modifiers": {
+                "mandatory": [],
+                "optional": ["any"]
+            }
+        },
+        "to": [{
+            "set_variable": {
+                "name": variable_name,
+                "value": 1
+            }
+            }],
+            "to_after_key_up": [{
+            "set_variable": {
+                "name": variable_name,
+                "value": 0
+            }
+            }],
+            "to_if_alone": [{
+            "key_code": key_code
+            }],
+        "type": "basic"
+    }

@@ -8,10 +8,13 @@ class Rule:
         self.description = description
 
     # Convert rule to json
-    def serialize(self):
+    def serialize(self, serialized_manipulators: list[dict] = []):
+        manipulators = [manipulator.serialize() for manipulator in self.manipulators]
+        for serialized_manipulator in serialized_manipulators:
+            manipulators.append(serialized_manipulator)
         return {
             "description": self.description,
-            "manipulators": [manipulator.serialize() for manipulator in self.manipulators]
+            "manipulators": manipulators
         }
 
     # Require keyboard type for all manipulators in the rule
