@@ -6,6 +6,7 @@ from layouts import Layout, combine_ansi_iso, rotate_from_alternate, rotate_from
 import copy
 
 base_extend: dict = json.load(open("extend_rule.json", "r"))
+wide_extend: dict = json.load(open("wide_extend_rule.json", "r"))
 
 ansi_colemak = "`1234567890-=qwfpgjluy;[]\\arstdhneio'zxcvbkm,./"
 iso_colemak = "`1234567890-=qwfpgjluy;[]arstdhneio'#\\zxcvbkm,./"
@@ -89,7 +90,11 @@ for curl, angle, wide, symbol in product((0, 1), repeat=4):
 
         # Complicated logic for a simple task: give the extend layer the \zxcvb keys (in qwerty) as command keybinds for the layout
         if extend:
-            layout_extend = copy.deepcopy(base_extend)
+            if wide:
+                layout_extend = copy.deepcopy(wide_extend)
+            else: 
+                layout_extend = copy.deepcopy(base_extend)
+                
             for qwerty_key in ['z', 'x', 'c', 'v', 'b', '\\']:
                 if qwerty_key != '\\':
                     key_position = Layout.ANSI_QWERTY.index(qwerty_key)
