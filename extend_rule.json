@@ -297,7 +297,8 @@
       }
     },
     "to": [{
-      "pointing_button": "button4"
+      "key_code": "open_bracket",
+      "modifiers": ["left_command"]
     }],
     "type": "basic"
   }, {
@@ -314,7 +315,8 @@
       }
     },
     "to": [{
-      "pointing_button": "button5"
+      "key_code": "close_bracket",
+      "modifiers": ["left_command"]
     }],
     "type": "basic"
   }, {
