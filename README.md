@@ -23,3 +23,6 @@ For information about Extend in general, read https://dreymar.colemak.org/layers
 
 # Little warning
 This script may only work when qwerty is set as the input source. The layout will likely work incorrectly if you use a different layout. Make an issue here if there's any problem with that and I'll come up with a solution for you. It's pretty easy to switch the original layout. It would be slightly difficult to implement every source layout, though.
+
+# MacOS Colemak Variations
+- [Rulemak (Ukulele)](https://github.com/Dreak618/Rulemak_MacOS)
