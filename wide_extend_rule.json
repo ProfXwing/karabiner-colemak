@@ -26,10 +26,11 @@
         }
       ],
       "to_if_alone": [
-        {
-          "key_code": "caps_lock"
-        }
-      ],
+          {
+            "hold_down_milliseconds": 80,
+            "key_code": "caps_lock"
+          }      
+        ],
       "type": "basic"
     },
     {
@@ -408,6 +409,28 @@
         {
           "key_code": "close_bracket",
           "modifiers": ["left_command"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "extend",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "s",
+        "modifiers": {
+          "mandatory": [],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_control"
         }
       ],
       "type": "basic"
@@ -924,6 +947,23 @@
           }
         }
       ],
+      "type": "basic"
+    }, {
+      "conditions": [{
+        "name": "extend",
+        "type": "variable_if",
+        "value": 1
+      }],
+      "from": {
+        "key_code": "spacebar",
+        "modifiers": {
+          "mandatory": [],
+          "optional": ["any"]
+        }
+      },
+      "to": [{
+        "key_code": "return_or_enter"
+      }],
       "type": "basic"
     }
   ]
